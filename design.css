@@ -1,0 +1,160 @@
+:root {
+  /* Neutral */
+  --Neutral-900: hsl(0, 0%, 7%);
+  --Neutral-800: hsl(0, 0%, 15%);
+  --Neutral-500: hsl(240, 3%, 46%);
+  --Neutral-400: hsl(240, 1%, 59%);
+  --Neutral-0: hsl(0, 0%, 100%);
+
+  /* Blue */
+  --Blue-600: hsl(214, 100%, 55%);
+  --Blue-400: hsl(210, 100%, 65%);
+
+  /* Red */
+  --Red-500: hsl(354, 63%, 57%);
+
+  /* Green */
+  --Green-500: hsl(140, 63%, 57%);
+
+  /* Yellow */
+  --Yellow-400: hsl(49, 85%, 70%);
+
+  /* Font */
+  font-family: "Sora", sans-serif;
+
+  /* Spacing */
+  --spacing-0: 0px;
+  --spacing-25: 2px;
+  --spacing-50: 4px;
+  --spacing-75: 6px;
+  --spacing-100: 8px;
+  --spacing-125: 10px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1400: 112px;
+  --spacing-1600: 128px;
+  --spacing-1800: 140px;
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
+}
+
+/* global rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* text presets */
+.text-preset-1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 136%;
+  letter-spacing: 0.4px;
+}
+
+.text-preset-1-regular {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 136%;
+  letter-spacing: 0.4px;
+}
+
+.text-preset-2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+.text-preset-3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.6px;
+}
+
+.text-preset-3-semibold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.3px;
+}
+
+.text-preset-4 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.6px;
+}
+
+.text-preset-5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+}
+
+.text-preset-6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+.text-color-neutral-900 {
+  color: var(--Neutral-900);
+}
+
+.text-color-neutral-800 {
+  color: var(--Neutral-800);
+}
+
+.text-color-neutral-500 {
+  color: var(--Neutral-500);
+}
+
+.text-color-neutral-400 {
+  color: var(--Neutral-400);
+}
+
+.text-color-neutral-0 {
+  color: var(--Neutral-0);
+}
+
+/* mobile overrides */
+
+@media (max-width: 768px) {
+  .text-preset-1 {
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.32px;
+  }
+
+  .text-preset-1-regular {
+    font-size: 32px;
+  }
+
+  .text-preset-3 {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+  }
+}

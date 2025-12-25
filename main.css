@@ -1,0 +1,18 @@
+body {
+  background-color: var(--Neutral-900);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  padding: var(--spacing-400) var(--spacing-1400);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
