@@ -41,45 +41,188 @@
             Personal best:&thinsp;
           </span>
           <span class="text-preset-4 text-color-neutral-0">
-            <span id="personal-best">92</span>
+            <span id="personal-best">0</span>
             WPM
           </span>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section id="bar" class="bar">
+          <div class="statistics">
+            <div>
+              <span class="text-preset-3 text-color-neutral-400">
+                WPM:&thinsp;
+              </span>
+              <span id="wpm" class="text-preset-2 text-color-neutral-0">0</span>
+            </div>
+
+            <span class="vertical-divisor"></span>
+
+            <div>
+              <span class="text-preset-3 text-color-neutral-400">
+                Accuracy:&thinsp;
+              </span>
+              <span id="accuracy" class="text-preset-2 text-color-neutral-0"
+                >100
+              </span>
+              <span class="text-preset-2 text-color-neutral-0">%</span>
+            </div>
+
+            <span class="vertical-divisor"></span>
+
+            <div>
+              <span class="text-preset-3 text-color-neutral-400"
+                >Time:&thinsp;
+              </span>
+              <span id="time" class="text-preset-2 text-color-neutral-0">
+                0:00
+              </span>
+            </div>
+          </div>
+          <div class="options desktop-only">
+            <div>
+              <span class="text-preset-5 text-color-neutral-400">
+                Difficulty:&thinsp;
+              </span>
+              <button
+                id="easy-button"
+                class="options-button text-preset-5 text-color-neutral-0 active"
+                onclick="setDifficulty('easy')"
+              >
+                Easy
+              </button>
+              <button
+                id="medium-button"
+                class="options-button text-preset-5 text-color-neutral-0"
+                onclick="setDifficulty('medium')"
+              >
+                Medium
+              </button>
+              <button
+                id="hard-button"
+                class="options-button text-preset-5 text-color-neutral-0"
+                onclick="setDifficulty('hard')"
+              >
+                Hard
+              </button>
+            </div>
+            <span class="vertical-divisor"></span>
+            <div>
+              <span class="text-preset-5 text-color-neutral-400">
+                Mode:&thinsp;
+              </span>
+              <button
+                id="timed-60-button"
+                class="options-button text-preset-5 text-color-neutral-0"
+                onclick="setMode('timed-60')"
+              >
+                Timed(60s)
+              </button>
+              <button
+                id="passage-button"
+                class="options-button text-preset-5 text-color-neutral-0 active"
+                onclick="setMode('passage')"
+              >
+                Passage
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="typying-area" class="typing-area">
+          <div
+            id="text-area"
+            class="text-preset-1-regular text-color-neutral-400"
+          ></div>
+          <div></div>
+        </section>
+
+        <section id="start-menu" class="start">
+          <button
+            id="start-button"
+            class="text-preset-3-semibold text-color-neutral-0"
+          >
+            Start Typing Test
+          </button>
+          <span class="text-preset-3-semibold text-color-neutral-0"
+            >or click the text and start typing</span
+          >
+        </section>
+
+        <section id="test-over" class="test-over">
+          <img
+            id="completed-img"
+            src="assets/images/icon-completed.svg"
+            alt=""
+          />
+          <h2 id="completed-title" class="text-preset-1 text-color-neutral-0">
+            Test Completed!
+          </h2>
+          <p
+            id="completed-paragraph"
+            class="text-preset-3 text-color-neutral-400"
+          >
+            Solid run. Keep pushing to beat your high score.
+          </p>
+          <div class="final-stats">
+            <div>
+              <h3 class="text-preset-3 text-color-neutral-400">WPM:</h3>
+              <span id="final-wpm" class="text-preset-2 text-color-neutral-0">
+                100
+              </span>
+            </div>
+            <div>
+              <h3 class="text-preset-3 text-color-neutral-400">Accuracy:</h3>
+              <span
+                id="final-accuracy"
+                class="text-preset-2 text-color-neutral-0"
+              >
+                100%
+              </span>
+            </div>
+            <div>
+              <h3 class="text-preset-3 text-color-neutral-400">Characters:</h3>
+              <div>
+                <span
+                  id="final-correct"
+                  class="text-preset-2 text-color-green-500"
+                >
+                  100
+                </span>
+                <span class="text-preset-2 text-color-neutral-400"> / </span>
+                <span id="final-wrong" class="text-preset-2 text-color-red-500"
+                  >5</span
+                >
+              </div>
+            </div>
+          </div>
+          <button id="retry-button">
+            <span class="text-preset-3-semibold text-color-neutral-900"
+              >Go Again</span
+            >
+            <!-- retry icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="currentColor"
+                d="M1.563 1.281h.949c.246 0 .422.211.422.457l-.07 3.446a8.6 8.6 0 0 1 7.277-3.868c4.816 0 8.718 3.938 8.718 8.72-.035 4.816-3.937 8.683-8.718 8.683a8.86 8.86 0 0 1-5.871-2.215.446.446 0 0 1 0-.633l.703-.703c.14-.14.386-.14.562 0 1.23 1.09 2.813 1.723 4.606 1.723A6.88 6.88 0 0 0 17.03 10c0-3.797-3.093-6.89-6.89-6.89-2.813 0-5.203 1.687-6.293 4.078l4.43-.106c.245 0 .456.176.456.422v.95c0 .245-.21.421-.421.421h-6.75a.406.406 0 0 1-.422-.422v-6.75c0-.21.175-.422.422-.422"
+              />
+            </svg>
+          </button>
+          <div id="stars-layer">
+            <img
+              id="confetti"
+              src="assets/images/pattern-confetti.svg"
+              alt=""
+            />
+          </div>
+        </section>
+      </main>
     </div>
-    test Personal best:
-    <!-- PB -->
-    WPM WPM:
-    <!-- WPM -->
-    Accuracy:
-    <!-- Accuracy -->
-    Time:
-    <!-- Time -->
-
-    Difficulty: Easy Medium Hard Mode: Timed (60s) Passage
-
-    <!-- Passage -->
-
-    Start Typing Test Or click the text and start typing
-
-    <!-- Test Complete Start -->
-
-    Test Complete! Solid run. Keep pushing to beat your high score. WPM:
-    <!-- WPM -->
-    Accuracy:
-    <!-- Accuracy -->
-    Characters:
-    <!-- Correct/Incorrect -->
-
-    Go Again
-
-    <!-- Test Complete End -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <script src="main.js"></script>
   </body>
 </html>

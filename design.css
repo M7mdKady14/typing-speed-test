@@ -140,6 +140,14 @@
   color: var(--Neutral-0);
 }
 
+.text-color-green-500 {
+  color: var(--Green-500);
+}
+
+.text-color-red-500 {
+  color: var(--Red-500);
+}
+
 /* mobile overrides */
 
 @media (max-width: 768px) {
